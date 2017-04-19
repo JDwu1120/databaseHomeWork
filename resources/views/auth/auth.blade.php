@@ -10,7 +10,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', '学生管理系统') }}</title>
 
 {{--<!-- Styles -->
 <link href="/css/app.css" rel="stylesheet">--}}

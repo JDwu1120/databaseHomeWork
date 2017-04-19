@@ -33,21 +33,21 @@
                     @endforeach
                     <div class="form-group has-success">
                         <label class="control-label" for="inputSuccess">学号</label>
-                        <input type="text" class="form-control" id="inputSuccess" name="studentNum">
+                        <input type="text" class="form-control" id="inputSuccess" name="studentNum" placeholder="{{ $res['studentNum'] }}">
                     </div>
 
                     <div class="form-group has-success">
                         <label class="control-label" for="inputSuccess">课程号</label>
-                        <input type="text" class="form-control" id="inputWarning" name="classNum">
+                        <input type="text" class="form-control" id="inputWarning" name="classNum" placeholder="{{ $res['classNum'] }}">
                     </div>
 
                     <div class="form-group has-success">
                         <label class="control-label" for="inputSuccess">成绩</label>
-                        <input type="text" class="form-control" id="inputError" name="score">
+                        <input type="text" class="form-control" id="inputError" name="score" placeholder="{{ $res['score'] }}">
                     </div>
                     <div class="form-group has-success">
                         <label class="control-label" for="inputSuccess">选课时间</label>
-                        <input type="text" class="form-control" id="inputSuccess" name="chose_year">
+                        <input type="text" class="form-control" id="inputSuccess" name="chose_year" placeholder="{{ $res['chose_year'] }}">
                     </div>
                     <button type="submit" class="btn btn-default">确定修改</button>
                     <a href="show"><button type="reset" class="btn btn-default">取消修改</button></a>

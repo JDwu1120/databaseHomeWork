@@ -79,6 +79,9 @@ class ShowInfoController extends Controller
                 }
             }
         }
+        if (substr_count($sql,',')==1){
+            $sql = str_replace(',','',$sql);
+        }
         if ($sql == $sql_init){
             exit("请输入有效数值");
         }else{
@@ -123,7 +126,8 @@ class ShowInfoController extends Controller
     //显示修改课程页面
     public function changeClass(Request $request){
         $num = $request->input('classNum');
-        return view('admin.changeClassInfo')->with('num',$num);
+        $info = $this->class->where('classNum',$num)->get()->toArray()[0];
+        return view('admin.changeClassInfo')->with('num',$info);
     }
     //修改课程信息
     public function changeClassAction(Request $request){
@@ -155,6 +159,9 @@ class ShowInfoController extends Controller
                     $sql = $sql . $k . "=" . "'" . $v . "'" . ",";
                 }
             }
+        }
+        if (substr_count($sql,',')==1){
+            $sql = str_replace(',','',$sql);
         }
         if ($sql == $sql_init){
             exit("请输入有效数值");
@@ -203,7 +210,12 @@ class ShowInfoController extends Controller
             'classnum' => $classnum,
             'studentnum' => $studentnum
         ];
-        return view('admin.changeChoseInfo')->with('res',$arr);
+        $info = $this->chose->where([
+            'classnum' => $classnum,
+            'studentnum' => $studentnum
+        ])->get()->toArray()[0];
+        $info += $arr;
+        return view('admin.changeChoseInfo')->with('res',$info);
     }
     //修改课程信息
     public function changeChoseAction(Request $request){
@@ -233,6 +245,9 @@ class ShowInfoController extends Controller
                     $sql = $sql . $k . "=" . "'" . $v . "'" . ",";
                 }
             }
+        }
+        if (substr_count($sql,',')==1){
+            $sql = str_replace(',','',$sql);
         }
         if ($sql == $sql_init){
             exit("请输入有效数值");

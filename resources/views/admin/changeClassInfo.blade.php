@@ -27,34 +27,34 @@
             <div class="col-lg-12">
                 <h2>信息修改</h2>
                 <form role="form" action="changeClassAction" method="get">
-                    <input type="hidden" name="num" value="{{ $num }}" />
+                    <input type="hidden" name="num" value="{{ $num['classNum'] }}" />
                     <div class="form-group has-success">
                         <label class="control-label" for="inputSuccess">课程编号</label>
-                        <input type="text" class="form-control" id="inputSuccess" name="classNum">
+                        <input type="text" class="form-control" id="inputSuccess" name="classNum" placeholder="{{ $num['classNum'] }}">
                     </div>
 
                     <div class="form-group has-success">
                         <label class="control-label" for="inputSuccess">课程名称</label>
-                        <input type="text" class="form-control" id="inputWarning" name="className">
+                        <input type="text" class="form-control" id="inputWarning" name="className" placeholder="{{ $num['className'] }}">
                     </div>
 
                     <div class="form-group has-success">
                         <label class="control-label" for="inputSuccess">教师姓名</label>
-                        <input type="text" class="form-control" id="inputError" name="teacherName">
+                        <input type="text" class="form-control" id="inputError" name="teacherName" placeholder="{{ $num['teacherName'] }}">
                     </div>
                     <div class="form-group has-success">
                         <label class="control-label" for="inputSuccess">学分</label>
-                        <input type="text" class="form-control" id="inputSuccess" name="credit">
+                        <input type="text" class="form-control" id="inputSuccess" name="credit" placeholder="{{ $num['credit'] }}">
                     </div>
 
                     <div class="form-group has-success">
                         <label class="control-label" for="inputSuccess">适宜年级</label>
-                        <input type="text" class="form-control" id="inputWarning" name="suit_grade">
+                        <input type="text" class="form-control" id="inputWarning" name="suit_grade" placeholder="{{ $num['suit_grade'] }}">
                     </div>
 
                     <div class="form-group has-success">
                         <label class="control-label" for="inputSuccess">结课时间</label>
-                        <input type="text" class="form-control" id="inputError" name="cancel_year">
+                        <input type="text" class="form-control" id="inputError" name="cancel_year" placeholder="{{ $num['cancel_year'] }}">
                     </div>
                     <button type="submit" class="btn btn-default">确定修改</button>
                     <a href="show"><button type="reset" class="btn btn-default">取消修改</button></a>
