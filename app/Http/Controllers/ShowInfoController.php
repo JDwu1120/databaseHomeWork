@@ -44,7 +44,8 @@ class ShowInfoController extends Controller
     //显示修改页面
     public function changeStudent(Request $request){
         $num = $request->input('studentNum');
-        return view('admin.changeInfo')->with('num',$num);
+        $info = $this->info->where("studentNum",$num)->get()->toArray()[0];
+        return view('admin.changeInfo')->with('num',$info);
     }
     //修改学生信息
     public function changeAction(Request $request){

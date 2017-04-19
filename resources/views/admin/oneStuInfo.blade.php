@@ -59,7 +59,7 @@
                                 <tr>
                                     <td>{{ $user['studentNum'] }}</td>
                                     <td>{{ $user['classNum'] }}</td>
-                                    <td>{{ $user['classNum'] }}</td>
+                                    <td>{{ $user['className'] }}</td>
                                     <td>{{ $user['chose_year'] }}</td>
                                     <td>{{ $user['teacherName'] }}</td>
                                     <td>{{ $user['credit'] }}</td>

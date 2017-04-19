@@ -27,39 +27,39 @@
             <div class="col-lg-12">
                 <h2>信息修改</h2>
                 <form role="form" action="changeAction" method="get">
-                 <input type="hidden" name="num" value="{{ $num }}" />
+                 <input type="hidden" name="num" value="{{ $num['studentNum'] }}" />
                     <div class="form-group has-success">
                         <label class="control-label" for="inputSuccess">学号</label>
-                        <input type="text" class="form-control" id="inputSuccess" name="studentNum">
+                        <input type="text" class="form-control" id="inputSuccess" name="studentNum" placeholder="{{ $num['studentNum'] }}">
                     </div>
 
                     <div class="form-group has-success">
                         <label class="control-label" for="inputSuccess">姓名</label>
-                        <input type="text" class="form-control" id="inputWarning" name="name">
+                        <input type="text" class="form-control" id="inputWarning" name="name" placeholder="{{ $num['name'] }}">
                     </div>
 
                     <div class="form-group has-success">
                         <label class="control-label" for="inputSuccess">性别</label>
-                        <input type="text" class="form-control" id="inputError" name="sex">
+                        <input type="text" class="form-control" id="inputError" name="sex" placeholder="{{ $num['sex'] }}">
                     </div>
                     <div class="form-group has-success">
                         <label class="control-label" for="inputSuccess">入学年龄</label>
-                        <input type="text" class="form-control" id="inputSuccess" name="enter_age">
+                        <input type="text" class="form-control" id="inputSuccess" name="enter_age" placeholder="{{ $num['enter_age'] }}">
                     </div>
 
                     <div class="form-group has-success">
                         <label class="control-label" for="inputSuccess">入学年份</label>
-                        <input type="text" class="form-control" id="inputWarning" name="enter_year">
+                        <input type="text" class="form-control" id="inputWarning" name="enter_year" placeholder="{{ $num['enter_year'] }}">
                     </div>
 
                     <div class="form-group has-success">
                         <label class="control-label" for="inputSuccess">专业</label>
-                        <input type="text" class="form-control" id="inputError" name="major">
+                        <input type="text" class="form-control" id="inputError" name="major" placeholder="{{ $num['major'] }}">
                     </div>
 
                     <div class="form-group has-success">
                         <label class="control-label" for="inputSuccess">班级</label>
-                        <input type="text" class="form-control" id="inputSuccess" name="class">
+                        <input type="text" class="form-control" id="inputSuccess" name="class" placeholder="{{ $num['class'] }}">
                     </div>
                     <button type="submit" class="btn btn-default">确定修改</button>
                     <a href="show"><button type="reset" class="btn btn-default">取消修改</button></a>
