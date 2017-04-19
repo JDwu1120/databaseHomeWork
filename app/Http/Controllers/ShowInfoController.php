@@ -79,9 +79,7 @@ class ShowInfoController extends Controller
                 }
             }
         }
-        if (substr_count($sql,',')==1){
-            $sql = str_replace(',','',$sql);
-        }
+        $sql = substr_replace($sql,'',strripos($sql,','),0);
         if ($sql == $sql_init){
             exit("请输入有效数值");
         }else{
@@ -160,9 +158,7 @@ class ShowInfoController extends Controller
                 }
             }
         }
-        if (substr_count($sql,',')==1){
-            $sql = str_replace(',','',$sql);
-        }
+        $sql = substr_replace($sql,'',strripos($sql,','),0);
         if ($sql == $sql_init){
             exit("请输入有效数值");
         }else{
@@ -246,9 +242,7 @@ class ShowInfoController extends Controller
                 }
             }
         }
-        if (substr_count($sql,',')==1){
-            $sql = str_replace(',','',$sql);
-        }
+        $sql = substr_replace($sql,'',strripos($sql,','),0);
         if ($sql == $sql_init){
             exit("请输入有效数值");
         }else{
